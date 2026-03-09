@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NOLI ME TANGERE</title>
+<style>
+body {margin: 0; font-family:Georgia;background: url('noli.jpg') repeat; color: #3e2f1c;}
+
+h1 { text-align: center;font-size: 70px; margin: 60px 20px 40px 20px;font-family: serif;color: #4b2e1a; text-shadow: 2px 2px 4px #bfa882;}
+
+.video-container {display: flex;justify-content: center; margin: 60px 0;}
+
+.video-container video {width: 70%;max-width: 800px;border: 5px solid #d4b483; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);}
+
+.video-container video:hover {transform: scale(1.02);box-shadow: 0 15px 35px rgba(0,0,0,0.3); transition: all 0.4s ease;cursor: pointer;}
+
+.content {max-width: 900px; margin: 50px auto; background-color: #ffffcc;padding: 40px; border-radius: 15px;box-shadow: 0 10px 20px rgba(0,0,0,0.2);line-height: 1.8;}
+
+.content h2 {font-family: Georgia; font-size: 32px; margin-bottom: 20px; color: #4b2e1a; text-align: center; text-decoration: underline;text-underline-offset: 6px;}
+
+.content p {font-size: 20px;color: #3e2f1c;margin-bottom: 20px;padding: 15px;border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);border: 2px solid #d4b483;background: rgba(255,255,204,0.8);
+
+footer {text-align: center;padding: 30px 20px;font-size: 18px;color: #4b2e1a;background-color: rgba(255,245,230,0.85);}
+
+.fade {opacity: 0; transform: translateY(40px); transition: all 1s ease;}
+
+.fade.show {opacity: 1;transform: translateY(0);}
+</style>
+</head>
+<body>
+
+<audio controls autoplay loop>
+<source src="noliz.mp3" type="audio/mpeg">
+</audio>
+
+<h1 class="fade">NOLI ME TANGERE</h1>
+
+<div class="video-container fade">
+<video controls>
+<source src="Ibarra.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="content fade">
+<h2>Repleksyon</h2>
+<p>Ang <em>Noli Me Tangere</em> ay isang nobelang isinulat ni Jose Rizal. Inimulat nito ang mga mamamayan sa kasamaan ng mga Kastila noong panahayon na iyon. Ang aming play ay puno ng mensahe, hatid namin sa aming mga manonood, lalo na po są mga kabataan.</p>
+
+<p>Habang kami pa ay nasa gitna ng aming mga practices para sa aming Noli play, bilang parte ng play na iyon ay madami po akont natutunan. Lalo kong naipakita iyung mga talento ko, tulad ng pagkanta at pagsayaw. Greatful po ako sa lahat ng sumusuporta sa amin, at syempre proud po ako sa aming batch, kasi kahit sobrang busy na po namin at halos tambak ang schoolworks, nagawa pa rin po nilang gawin ang best nila. Hanggang sa muli, NOLI!</p>
+</div>
+
+<footer class="fade">
+<a href="index.html">Return To Homepage</a>
+</footer>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {const observer = new IntersectionObserver(entries => {entries.forEach(entry => {if(entry.isIntersecting){entry.target.classList.add('show');}});}, {threshold: 0.2 });
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));});
+</script>
+
+</body>
+</html>
